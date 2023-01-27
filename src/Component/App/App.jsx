@@ -6,6 +6,7 @@ import HeadingRow from '../HeadingRow/HeadingRow'
 import TodoList from "../TodoList/TodoList";
 import Popup from "../Popup/Popup";
 import FetchData from '../../FetchData/fetchData';
+import Loader from '../Loader/Loader';
 
 const App = () => {
     const [data, setData] = useState([]);
@@ -39,9 +40,10 @@ const App = () => {
             <HeadingRow 
                 popup={popup}
             />
+            
             {isLoading 
                 ?
-                <p>Load</p>
+                <Loader />
                 :
                 <TodoList
                     post ={post}

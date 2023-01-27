@@ -7,7 +7,7 @@ const Additem = ({setPopup,post}) => {
     const [value, setValue] = useState('')
     return (
         <div className='add-item'>
-            <input value={value} onChange={(e) => setValue(e.target.value)} type="text" className='input' placeholder='What u want to do'/>
+            <input value={value} onChange={(e) => setValue(e.target.value)} type="text" className='input' placeholder='What u want to do' tabIndex='1z'/>
             <button className='button'
                 onClick={() => {
                     post({
@@ -17,6 +17,7 @@ const Additem = ({setPopup,post}) => {
                     })
                     setPopup(false)
                 }}
+                tabIndex='2'
             >
                 <DoneSvg />    
             </button>            

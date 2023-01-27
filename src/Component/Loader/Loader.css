@@ -1,0 +1,25 @@
+.loader {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; 
+    animation: loaderA 10s linear infinite alternate;
+}
+
+@keyframes loaderA {
+    0% {
+        border: 3px solid #7CC0FF;
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        border: 3px solid #0084ff;
+        transform: scale(1.2) rotate(360deg);
+    }
+}

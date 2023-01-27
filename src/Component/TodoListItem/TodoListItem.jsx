@@ -14,7 +14,7 @@ const TodoListItem = ({name, status, id, remove, edit}) => {
     }, [settings])
 
     return (
-        <div className={done ? 'todo-list-item done' : 'todo-list-item'}>
+        <div className={done ? 'todo-list-item done' : 'todo-list-item'} >
 
             <div className={settings ? 'todo-list-item__wrapper settings' : 'todo-list-item__wrapper'}>
 
@@ -60,6 +60,7 @@ const TodoListItem = ({name, status, id, remove, edit}) => {
                                 "name": `${newValue}`
                             })
                         }}
+                        tabIndex='1'
                     >
                         <DoneSvg />
                     </div>
